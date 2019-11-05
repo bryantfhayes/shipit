@@ -1,0 +1,72 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scripts/MenuBar.gd" type="Script" id=1]
+[ext_resource path="res://assets/bar.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32.5357, 32.3928 )
+
+[node name="MenuBar" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="BarImg" type="TextureRect" parent="."]
+margin_right = 482.0
+margin_bottom = 74.0
+mouse_filter = 2
+texture = ExtResource( 2 )
+
+[node name="Btn_1" type="Area2D" parent="."]
+z_index = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Btn_1"]
+position = Vector2( 38.3035, 37.2321 )
+shape = SubResource( 1 )
+
+[node name="Btn_2" type="Area2D" parent="."]
+position = Vector2( 68.5713, 0.26786 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Btn_2"]
+position = Vector2( 38.3035, 37.2321 )
+shape = SubResource( 1 )
+
+[node name="Btn_3" type="Area2D" parent="."]
+position = Vector2( 135.803, -0.535706 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Btn_3"]
+position = Vector2( 38.3035, 37.2321 )
+shape = SubResource( 1 )
+
+[node name="Btn_4" type="Area2D" parent="."]
+position = Vector2( 203.303, 0.26786 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Btn_4"]
+position = Vector2( 38.3035, 37.2321 )
+shape = SubResource( 1 )
+
+[node name="Btn_5" type="Area2D" parent="."]
+position = Vector2( 271.607, 0.26786 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Btn_5"]
+position = Vector2( 38.3035, 37.2321 )
+shape = SubResource( 1 )
+
+[node name="Btn_6" type="Area2D" parent="."]
+position = Vector2( 339.91, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Btn_6"]
+position = Vector2( 38.3035, 37.2321 )
+shape = SubResource( 1 )
+
+[node name="Btn_7" type="Area2D" parent="."]
+position = Vector2( 408.214, -0.803566 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Btn_7"]
+position = Vector2( 38.3035, 37.2321 )
+shape = SubResource( 1 )
+[connection signal="input_event" from="Btn_1" to="." method="_on_Btn_1_input_event"]
+[connection signal="input_event" from="Btn_2" to="." method="_on_Btn_2_input_event"]
+[connection signal="input_event" from="Btn_3" to="." method="_on_Btn_3_input_event"]
+[connection signal="input_event" from="Btn_4" to="." method="_on_Btn_4_input_event"]
+[connection signal="input_event" from="Btn_5" to="." method="_on_Btn_5_input_event"]
+[connection signal="input_event" from="Btn_6" to="." method="_on_Btn_6_input_event"]
+[connection signal="input_event" from="Btn_7" to="." method="_on_Btn_7_input_event"]
